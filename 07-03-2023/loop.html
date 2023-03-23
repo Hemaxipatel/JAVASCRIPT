@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- in js there is 3 types of loop:
+(1)while loop
+   syntax: 
+        while(condition){
+            statements;
+        }
+        {} => block
+
+(2)do... while loop
+   syntax:
+        do{
+            statements;
+        }while(condition);
+
+(3)for loop
+   initialization = declaration
+   syntax:
+        for(initialization, condition;
+            increment/decrement){
+                statements;
+            }
+            
+(4)for... in loop
+
+(5)for... of loop
+
+(6)foreach loop-->
+
+    <!-- print 1 to 10 numbers -->
+    <script>
+        let a = 1;
+        while (a <= 10) {
+            document.writeln(a);
+            a++;
+        }
+        document.write("<br>")
+
+        // print 11 to 20 numbers
+        let b = 11;
+        do {
+            document.writeln(b);
+            b++;
+        } while (b <= 20) {
+            // document.writeln(b);
+        }
+        document.write("<br>")
+
+        // print 1 to 20 numbers
+
+        for (c = 1; c <= 20; c++) {
+            document.writeln(c);
+        }
+        document.write("<br>")
+
+        //decrement
+        let d = 10;
+        for (d = 10; d >= 1; d--) {
+            document.writeln(d);
+        }
+    </script>
+</body>
+
+</html>
