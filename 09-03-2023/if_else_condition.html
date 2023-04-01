@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- find the minimum number of 2 values -->
+    <!-- input type = text = user 24 hours =  -->
+    <label for="">Enter Hours in 24 format</label>
+    <input type="text" name="" id="hours"> <button id="btn1" onclick="msg()">Click Here</button>
+    <script>
+        // let n1 = 50;
+        // let n2 = 40;
+
+        // if (n1 < n2) {
+        //     document.write("n1 is minimum");
+        // } else {
+        //     document.write("n2 is minimum");
+        // }
+
+        // If the hour is less than 18, create a "Good day" greeting, otherwise "Good evening":
+        // let hour = 21;
+        function msg() {
+            let h = document.getElementById("hours").value;
+            if (h < 10) {
+                alert("Good Day");
+            } else if (h < 20) {
+                alert("Good Evening")
+            } else if (h < 25) {
+                alert("good night")
+            } else {
+                alert("wrong entered value")
+            }
+        }
+    </script>
+</body>
+
+</html>
