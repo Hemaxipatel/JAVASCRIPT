@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // let bgcolor = document.getElementById("p1");
+        function confirm_fn() {
+            if (confirm("click any button") == true) {
+                // document.body.style.backgroundColor = "lawngreen";
+                alert("click on OK")
+            } else {
+                alert("click on cancel")
+                // document.body.style.backgroundColor = "royalblue"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="return confirm_fn()">Confirm popup</button>
+    <p id="p1"></p>
+</body>
+
+</html>

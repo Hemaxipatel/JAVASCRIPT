@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function fn_display() {
+            let firstname = document.getElementById("fname").value;
+            document.getElementById("p1").innerHTML = "Your name is: " + firstname;
+
+            return false
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- user input program -->
+    <form action="">
+        Enter your name :
+        <input type="text" name="fn" id="fname">
+        <button onclick="return fn_display()">Click here</button>
+    </form>
+    <p id="p1"></p>
+</body>
+
+</html>
