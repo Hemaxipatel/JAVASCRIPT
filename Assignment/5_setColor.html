@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display color</title>
+    <style>
+        .div1 {
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            background-color: green;
+        }
+
+        .div2 {
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            background-color: blue;
+        }
+    </style>
+
+    <script>
+        function fill_box() {
+            let div1 = document.getElementById("grn");
+            div1.classList.toggle("div1");
+            return false;
+        }
+        function fill_box1() {
+            let div2 = document.getElementById("blu");
+            div2.classList.toggle("div2");
+            return false;
+        }
+    </script>
+
+</head>
+
+<body>
+    <button onclick="return fill_box()">Green</button>
+    <button onclick="return fill_box1()">Blue</button>
+    <hr>
+    <div id="grn"></div>
+
+    <br>
+    <div id="blu"></div>
+</body>
+
+</html>

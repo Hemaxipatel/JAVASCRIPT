@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display math table</title>
+    <style>
+        span {
+            color: red;
+        }
+
+        form {
+            height: auto;
+            width: 200px;
+            border: 1px solid gray;
+            padding: 0px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        Enter any number :
+        <input type="text" name="" id="num1">
+        <span id="msg"></span>
+
+        <br>
+        <br>
+        <button onclick="return displaytbl()">Display</button>
+        <p id="p1"></p>
+    </form>
+
+    <script>
+        function displaytbl() {
+            var no = document.getElementById("num1").value;
+            if (no == "") {
+                document.getElementById("msg").innerText = "Please enter any number";
+                return false;
+            } else {
+                var i = 1;
+                var res = "";
+                for (i = 1; i <= 10; i++) {
+                    res = res + "<p>" + no + "*" + i + "=" + no * i + "</p>"
+                }
+                document.getElementById("p1").innerHTML = res;
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>

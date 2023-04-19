@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="1_style.css">
+    <script src="allblank.js"></script>
+    <!-- hide_show pwd -->
+    <script>
+        function hide_show() {
+            let pass = document.getElementById("pass");
+            if (pass.type == "password") {
+                pass.type = "text"
+            } else {
+                pass.type = "password"
+            }
+        }
+
+        function mobile_ex(exchk, spanid) {
+            let regEx = /^[0-9]*$/;
+            if (regEx.test(exchk.value)) {
+                document.getElementById("spanid").innerHTML = ""
+                return false
+            } else {
+                document.getElementById("spanid").innerHTML = "Enter digit only"
+                return false
+            }
+        }
+
+        function mobile_length() {
+            let mob = document.getElementById("mob").value;
+            if (mob.length < 10) {
+                document.getElementById("msg8").innerHTML = "Enter valid Mobile No"
+                return false
+            } else {
+                document.getElementById("msg8").innerHTML = ""
+                return false
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#">
+        <h1>registration for jobs</h1>
+        <!-- first name -->
+        <div class="row">
+            <div class="col-1">
+                <label for="">First Name</label>
+            </div>
+            <div class="col-2">
+                <input type="text" name="" id="fname" placeholder="Enter First name">
+                <span id="msg1"></span>
+            </div>
+        </div>
+        <!-- middle name -->
+        <div class="row">
+            <div class="col-1">
+                <label for="">Middle Name</label>
+            </div>
+            <div class="col-2">
+                <input type="text" name="" id="mname" placeholder="Enter Middle name">
+                <span id="msg2"></span>
+            </div>
+        </div>
+        <!-- last name -->
+        <div class="row">
+            <div class="col-1">
+                <label for="">Last Name</label>
+            </div>
+            <div class="col-2">
+                <input type="text" name="" id="lname" placeholder="Enter Last name">
+                <span id="msg3"></span>
+            </div>
+        </div>
+        <!-- address -->
+        <div class="row">
+            <div class="col-1">
+                <label for="">Address</label>
+            </div>
+            <div class="col-2">
+                <textarea name="" id="addr" cols="30" rows="5" placeholder="Enter Address"></textarea>
+                <span id="msg4"></span>
+            </div>
+        </div>
+        <!-- date of birth -->
+        <div class="row">
+            <div class="col-1">
+                <label for="">Date of Birth</label>
+            </div>
+            <div class="col-2">
+                <input type="date" name="" id="dob">
+                <span id="msg5"></span>
+            </div>
+        </div>
+        <!-- gender -->
+        <div class="row">
+            <div class="col-1">
+                <label for="">Gender</label>
+            </div>
+            <div class="col-2">
+                <input type="radio" name="gen" id="male">Male
+                <input type="radio" name="gen" id="female">Female
+                <span id="msg6"></span>
+            </div>
+        </div>
+        <!-- experience -->
+        <div class="row">
+            <div class="col-1">
+                <label for="">Experience</label>
+            </div>
+            <div class="col-2">
+                <select name="" id="exp">
+                    <option value="">------ select ------</option>
+                    <option value="">Fresher</option>
+                    <option value="">6 months</option>
+                    <option value="">1 year</option>
+                    <option value="">2 year</option>
+                    <option value="">more than 5 year</option>
+                </select>
+                <span id="msg7"></span>
+            </div>
+        </div>
+        <!-- mobile no -->
+        <div class="row">
+            <div class="col-1">
+                <label for="">Mobile No</label>
+            </div>
+            <div class="col-2">
+                <input type="text" name="" id="mob" maxlength="10" placeholder="Enter Mobile No"
+                    onkeyup="return mobile_ex(this, msg8)" onblur="return mobile_length()">
+                <span id="msg8"></span>
+            </div>
+        </div>
+        <!-- email -->
+        <div class="row">
+            <div class="col-1">
+                <label for="">Email id</label>
+            </div>
+            <div class="col-2">
+                <input type="text" name="" id="email" placeholder="Enter Email">
+                <span id="msg9"></span>
+            </div>
+        </div>
+        <!-- password -->
+        <div class="row">
+            <div class="col-1">
+                <label for="">Create Password</label>
+            </div>
+            <div class="col-2">
+                <input type="password" name="password" id="pass" placeholder="Enter Password">
+                <span id="msg10"></span>
+            </div>
+        </div>
+        <!-- show password -->
+        <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+                <input type="checkbox" onclick="return hide_show()">Show Password
+            </div>
+        </div>
+        <!-- button -->
+        <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-2">
+                <button type="submit" onclick="return form_value_blank()">Register</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
