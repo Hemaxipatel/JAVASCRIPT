@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    margin: 0px 50px;
+}
+
+/****************** header *************************/
+header {
+    background-color: black;
+}
+
+header .header-p {
+    padding: 10px 0px;
+}
+
+header .header-nav {
+    display: flex;
+    align-items: center;
+}
+
+header .header-nav .header-block {
+    display: flex;
+    gap: 20px;
+    flex: 2;
+}
+
+header .header-nav .social-icons {
+    display: flex;
+    flex: 0.3;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+h4 {
+    color: white;
+}
+
+header .header-nav .social-icons span {
+    color: white;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.social-icons a span:hover {
+    color: black;
+    background-color: white;
+}
+
+/******************** home page ***********************/
+.home-page {
+    position: fixed;
+    width: 100%;
+    z-index: 2222;
+}
+
+.homepage-fixed {
+    background-color: white;
+    color: black;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 111111;
+    transition: 2s all ease;
+}
+
+.homepage-fixed a {
+    color: black !important;
+}
+
+.homepage-fixed a:hover {
+    color: #86b817 !important;
+}
+
+.home-page .home-p {
+    padding: 30px 0px;
+}
+
+.home-page .home-nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.home-nav .logo {
+    flex: 0.5;
+}
+
+.logo h1 {
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #86b817;
+}
+
+.home-nav .nav-blog {
+    flex: 1.5;
+}
+
+.nav-blog ul {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+.nav-blog ul li a {
+    font-size: 20px;
+    font-weight: 600;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 90%, #86b817);
+    background-repeat: no-repeat;
+    background-size: 0% 100%;
+    background-position-x: center;
+    transition: background-size 500ms;
+}
+
+ul li a:hover {
+    background-size: 100% 100%;
+    background-position-x: center;
+}
+
+.nav-blog ul li a {
+    color: white;
+}
+
+.nav-blog ul li a:hover {
+    color: #86b817;
+}
+
+.home-nav .btn-register {
+    flex: 0.5;
+    text-align: end;
+}
+
+button {
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    background-color: #86b817;
+    color: white;
+    cursor: pointer;
+}
+
+.home-nav button:hover {
+    background-color: #99c830;
+}
+
+/******************** home image ******************/
+.home-img .homeimg-p {
+    padding: 220px 0px;
+}
+
+.home-img {
+    background-image: url(images/img1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+}
+
+.home-img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.556);
+    z-index: -1;
+    ;
+}
+
+.text h1 {
+    text-transform: capitalize;
+    font-size: 4rem;
+    color: white;
+    padding-bottom: 20px;
+    padding-left: 300px;
+    padding-top: 100px;
+}
+
+.text h3 {
+    color: white;
+    font-size: 25px;
+    padding-left: 330px;
+    padding-bottom: 30px;
+}
+
+form {
+    position: relative;
+}
+
+.btn-search {
+    /* position: relative; */
+    padding-left: 400px;
+}
+
+input {
+    height: 60px;
+    width: 650px;
+    border: none;
+    border-radius: 30px;
+    font-size: 17px;
+    color: gray;
+    padding-left: 20px;
+}
+
+.btn-search button {
+    position: absolute;
+    top: 10px;
+    left: 935px;
+}
+
+.btn-search button:hover {
+    background-color: #99c830;
+}
