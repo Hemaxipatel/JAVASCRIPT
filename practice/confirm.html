@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function confirm_fn() {
+            let head = document.querySelector("h1")
+            if (confirm("click any buttton") == true) {
+                document.body.style.color = "lawngreen"
+                // alert("you click on ok")
+            } else {
+                // alert("you click on cancel")
+                document.body.style.color = "firebrick"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="return confirm_fn()">Confirm Function</button>
+
+    <h1>Hello World</h1>
+</body>
+
+</html>
